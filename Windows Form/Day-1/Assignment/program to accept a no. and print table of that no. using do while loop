@@ -1,0 +1,38 @@
+//program to accept a no. and print table of that no. using do while loop
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace multiplication_table_using_do_while
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n=int.Parse(textBox1.Text);
+            int i = 1;
+            int res = 1;
+            StringBuilder s = new StringBuilder();
+
+            do
+            {
+                res = n * i;
+                s.Append(n + " * " + i + " = " + res + " \n ");
+                i++;
+            } while (i <= 10);
+            label2.Text = s.ToString();  
+        }
+    }
+}
