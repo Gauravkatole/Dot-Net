@@ -1,0 +1,39 @@
+//4 program to accept age and display whether minor, young or old.
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Minor_young_old
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int age = Convert.ToInt32(textBox1.Text);
+
+            if (age < 18)
+            {
+                label2.Text = "You Are Minor";
+            }
+            else if(age>=18 && age <= 50)
+            {
+                label2.Text = "You are Young";
+            }
+            else
+            {
+                label2.Text = "You are Old";
+            }
+        }
+    }
+}
