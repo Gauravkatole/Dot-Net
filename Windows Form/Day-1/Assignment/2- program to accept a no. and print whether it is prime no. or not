@@ -1,0 +1,44 @@
+//2- program to accept a no. and print whether it is prime no. or not
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace prime__number_or_not
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n1=Convert.ToInt32(textBox1.Text);
+            int a = 0;
+
+            for(int i = 1; i <= n1; i++)
+            {
+                if(n1%i == 0)
+                {
+                    a++;
+                }
+            }
+            if (a == 2)
+            {
+                label2.Text = "Result: Given number is prime number";
+            }
+            else
+            {
+                label2.Text = "Result: Given number is Not prime number";
+            }
+        }
+    }
+}
