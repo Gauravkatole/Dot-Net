@@ -1,0 +1,55 @@
+//program to accept 3 subject marks and display total , percentage and grade
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _3_subject_marks
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int m1 = Convert.ToInt32(textBox1.Text);
+            int m2 = Convert.ToInt32(textBox2.Text);
+            int m3 = Convert.ToInt32(textBox3.Text);
+            int sum = m1 + m2 + m3;
+
+            float per = (sum / 300.0f) * 100.0f;
+
+            if (per >= 90)
+            {
+                label6.Text = "Grade: Distintion";
+            }
+           else if (per >=80 && per< 90)
+            {
+                label6.Text = "Grade: First Class";
+            }
+            else if (per >=70 && per< 80)
+            {
+                label6.Text = "Grade: Second class";
+            }
+            else if (per >= 60 && per<70)
+            {
+                label6.Text = "Grade: Third class";
+            }
+            else
+            {
+                label6.Text = "Fail";
+            }
+            label4.Text = "Total : " + sum;
+            label5.Text = "Percentage : " + per;
+
+        }
+    }
+}
