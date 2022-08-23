@@ -1,0 +1,68 @@
+//2- program to accept a character and display whether vowel or not. using switch
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace vowel_or_not
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            char ch = Convert.ToChar(textBox1.Text);
+            switch (ch)
+            {
+                case 'a' :
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'e':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'i':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'o':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'u':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'A':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'E':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'I':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+
+                case 'O':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+                case 'U':
+                    label2.Text = "Result : " + ch + " Is Vowel ";
+                    break;
+
+                default:
+                    {
+                        label2.Text = "Result : " + ch + " Is Not Vowel ";
+                        break;
+                    }
+            }
+
+        }
+    }
+}
