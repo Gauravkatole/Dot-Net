@@ -1,0 +1,54 @@
+//program to accept empname, basicsalary, designation and display hra, bonus and total salary
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Employee
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            int salary = Convert.ToInt32(textBox2.Text);
+            string des = textBox3.Text;
+            float hra = 0;
+            float da = 0;
+            float total = 0;
+
+            switch(des)
+            {
+                case "manager":
+                    hra = salary * 0.35f;
+                    da = salary * 0.5f;
+                    break;
+
+                case "clerk":
+                    hra = salary * 0.25f;
+                    da = salary * 0.3f;
+                    break;
+
+                case "poen":
+                    hra = salary * 0.15f;
+                    da = salary * 0.2f;
+                    break;
+            }
+            label4.Text = "Hra : " + hra;
+            label5.Text = "Da : " + da;
+             total = hra + da + salary;
+            label6.Text = "Total Salary : " + total;
+        }
+    }
+}
